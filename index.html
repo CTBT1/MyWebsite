@@ -1,16 +1,69 @@
-
-<html>
-    <h1>
-        Hey, I'm NetworkChuck
-    </h1>
-    <body>
-        <h2>About me</h2>
-        <p>
-            I am a coffee addict who makes vidoes sometimes.
-        </p>
-        <h2>What I'm working on</h2>
-        <p>
-            I'm obsessed with AI right now and I'm working on the CPTS from HTB.
-        </p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Dark Mode Website</title>
+    <style>
+        body {
+            background-color: #1e1e1e; /* Dark background */
+            color: #ffffff; /* Light text */
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        
+        button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+        
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        a {
+            color: #ffffff; /* Link color */
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Coding Dark Mode Website</h1>
+        <button onclick="location.href='#section1'">Section 1</button>
+        <button onclick="location.href='#section2'">Section 2</button>
+        <button onclick="location.href='#section3'">Section 3</button>
+        <br><br>
+        <div id="section1">
+            <h2>Section 1</h2>
+            <p>This is the content of Section 1.</p>
+        </div>
+        <div id="section2">
+            <h2>Section 2</h2>
+            <p>This is the content of Section 2.</p>
+        </div>
+        <div id="section3">
+            <h2>Section 3</h2>
+            <p>This is the content of Section 3.</p>
+        </div>
+    </div>
+</body>
 </html>
