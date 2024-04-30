@@ -10,6 +10,7 @@
             color: #ffffff; /* Light text */
             font-family: Arial, sans-serif;
             padding: 20px;
+            overflow: hidden;
         }
 
         .box {
@@ -19,8 +20,18 @@
             color: white;
             text-align: center;
             line-height: 100px;
-            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
             cursor: pointer;
+            animation: moveBox 5s infinite alternate; /* Animation */
+        }
+
+        @keyframes moveBox {
+            to {
+                top: calc(100vh - 100px); /* Move to bottom of the screen */
+                left: calc(100vw - 100px); /* Move to right of the screen */
+            }
         }
     </style>
 </head>
