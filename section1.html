@@ -21,32 +21,24 @@
             text-align: center;
             line-height: 100px;
             position: absolute;
-            top: 0;
-            left: 0;
+            top: calc(100vh * Math.random()); /* Random starting position */
+            left: calc(100vw * Math.random()); /* Random starting position */
             cursor: pointer;
-            animation: moveBox 5s infinite linear; /* Animation */
+            animation: moveBox linear infinite; /* Animation */
         }
 
         @keyframes moveBox {
-            0% {
-                top: 0;
-                left: 0;
+            0%, 100% {
+                transform: translate(0, 0);
             }
             25% {
-                top: 0;
-                left: calc(100vw - 100px);
+                transform: translate(calc(100vw - 100px), 0);
             }
             50% {
-                top: calc(100vh - 100px);
-                left: calc(100vw - 100px);
+                transform: translate(calc(100vw - 100px), calc(100vh - 100px));
             }
             75% {
-                top: calc(100vh - 100px);
-                left: 0;
-            }
-            100% {
-                top: 0;
-                left: 0;
+                transform: translate(0, calc(100vh - 100px));
             }
         }
     </style>
