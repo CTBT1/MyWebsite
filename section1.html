@@ -45,6 +45,12 @@
                 transform: translate(0, calc(100vh - 100px));
             }
         }
+
+        /* Additional CSS to set initial random position */
+        .box {
+            top: calc(100vh * Math.random());
+            left: calc(100vw * Math.random());
+        }
     </style>
 </head>
 <body>
