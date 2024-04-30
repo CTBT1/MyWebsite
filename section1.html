@@ -24,13 +24,29 @@
             top: 0;
             left: 0;
             cursor: pointer;
-            animation: moveBox 5s infinite alternate; /* Animation */
+            animation: moveBox 5s infinite linear; /* Animation */
         }
 
         @keyframes moveBox {
-            to {
-                top: calc(100vh - 100px); /* Move to bottom of the screen */
-                left: calc(100vw - 100px); /* Move to right of the screen */
+            0% {
+                top: 0;
+                left: 0;
+            }
+            25% {
+                top: 0;
+                left: calc(100vw - 100px);
+            }
+            50% {
+                top: calc(100vh - 100px);
+                left: calc(100vw - 100px);
+            }
+            75% {
+                top: calc(100vh - 100px);
+                left: 0;
+            }
+            100% {
+                top: 0;
+                left: 0;
             }
         }
     </style>
