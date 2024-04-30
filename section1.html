@@ -13,6 +13,12 @@
             overflow: hidden;
         }
 
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
         .box {
             width: 100px;
             height: 100px;
@@ -21,10 +27,8 @@
             text-align: center;
             line-height: 100px;
             position: absolute;
-            top: calc(100vh * Math.random()); /* Random starting position */
-            left: calc(100vw * Math.random()); /* Random starting position */
             cursor: pointer;
-            animation: moveBox linear infinite; /* Animation */
+            animation: moveBox linear infinite;
         }
 
         @keyframes moveBox {
@@ -44,6 +48,8 @@
     </style>
 </head>
 <body>
-    <div class="box" onclick="location.href='index.html'">Hello</div>
+    <div class="container">
+        <div class="box" onclick="location.href='index.html'">Hello</div>
+    </div>
 </body>
 </html>
