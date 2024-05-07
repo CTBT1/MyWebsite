@@ -1,3 +1,4 @@
 mc.ctbt.xyz
 Rizz?
-Sigma
+Sigma?
+Skibidi?
