@@ -43,6 +43,13 @@
         a:hover {
             text-decoration: underline;
         }
+
+        /* Added CSS for positioning the IP Chicken link */
+        .ipchicken-link {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
     </style>
 </head>
 <body>
@@ -50,7 +57,12 @@
         <h1>Welcome to CTBT</h1>
         <button onclick="location.href='section1.html'">Current Projects</button>
         <button onclick="location.href='section2.html'">Recent Discoveries</button>
-        <button onclick="location.href='section3.html'">My Current Favorite Game</button>
+        <button onclick="location.href='section3.html'">Forums</button>
     </div>
+
+    <!-- Added IP Chicken link -->
+    <a href="http://www.ipchicken.com" class="ipchicken-link">
+        <img src="http://www.ipchicken.com/images/ipc.gif" width="88" height="31" border="0">
+    </a>
 </body>
 </html>
