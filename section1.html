@@ -8,12 +8,13 @@
         body {
             margin: 0;
             padding: 0;
+            background-color: #1e1e1e; /* Dark background */
+            color: #ffffff; /* Light text */
         }
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -25,7 +26,7 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            margin-bottom: 20px;
+            margin-right: 10px;
         }
         /* Embed the OpenSpeedtest.com widget */
         #speedtest-widget {
@@ -35,23 +36,27 @@
         }
         #speedtest-widget iframe {
             width: 100%;
-            height: 100vh; /* Adjust height as needed */
+            height: calc(100vh - 140px); /* Adjust height as needed */
             max-height: 600px; /* Max height to fit the page */
             border: none;
+        }
+        /* Style for attribution */
+        .attribution {
+            text-align: right;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Back button -->
-        <a href="index.html" class="back-button">Back</a>
-        
         <!-- Embed the OpenSpeedtest.com widget -->
         <div id="speedtest-widget">
             <iframe src="//openspeedtest.com/speedtest"></iframe>
         </div>
 
-        Provided by <a href="https://openspeedtest.com">OpenSpeedtest.com</a>
+        <!-- Back button -->
+        <a href="index.html" class="back-button">Back</a>
+        <span class="attribution">Provided by <a href="https://openspeedtest.com">OpenSpeedtest.com</a></span>
     </div>
 </body>
 </html>
