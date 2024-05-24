@@ -40,29 +40,27 @@
 <body>
     <div class="container">
         <h1>Display IP Address</h1>
-        <button onclick="location.reload();">Show IP Address</button>
+        <button onclick="refreshIPAddress()">Show IP Address</button>
         <div id="ipAddress"></div>
     </div>
 
     <script>
-        function getIPAddress() {
+        function refreshIPAddress() {
             // Make a request to an external service to get the user's IP address
             fetch('https://api.ipify.org?format=json')
                 .then(response => response.json())
                 .then(data => {
                     // Display the user's IP address in the div
                     document.getElementById('ipAddress').innerText = "Your IP Address: " + data.ip;
-                    // Add a visual refresh effect
-                    document.getElementById('ipAddress').classList.add('refresh');
-                    setTimeout(() => {
-                        document.getElementById('ipAddress').classList.remove('refresh');
-                    }, 500);
                 })
                 .catch(error => {
                     console.error('Error fetching IP address:', error);
                     document.getElementById('ipAddress').innerText = "Failed to fetch IP address";
                 });
         }
+
+        // Fetch and display the IP address when the page loads
+        window.onload = refreshIPAddress;
     </script>
 </body>
 </html>
