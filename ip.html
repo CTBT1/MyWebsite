@@ -46,8 +46,17 @@
 
     <script>
         function refreshIPAddress() {
-            // Refresh the page to fetch the new IP address
-            window.location.reload();
+            // Make a request to an external service to get the user's IP address
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    // Display the user's IP address in the div
+                    document.getElementById('ipAddress').innerText = "Your IP Address: " + data.ip;
+                })
+                .catch(error => {
+                    console.error('Error fetching IP address:', error);
+                    document.getElementById('ipAddress').innerText = "Failed to fetch IP address";
+                });
         }
     </script>
 </body>
