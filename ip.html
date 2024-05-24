@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Page</title>
+</head>
+<body>
+    <div>
+        <h1>Display IP Address</h1>
+        <button onclick="getIPAddress()">IP Address</button>
+        <div id="ipAddress"></div>
+    </div>
+
+    <script>
+        function getIPAddress() {
+            // Make a request to an external service to get the user's IP address
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    // Display the user's IP address in the div
+                    document.getElementById('ipAddress').innerText = "Your IP Address: " + data.ip;
+                })
+                .catch(error => {
+                    console.error('Error fetching IP address:', error);
+                    document.getElementById('ipAddress').innerText = "Failed to fetch IP address";
+                });
+        }
+    </script>
+</body>
+</html>
