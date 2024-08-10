@@ -54,9 +54,15 @@
         /* Added CSS for GitHub logo */
         .github-logo {
             width: 88px;
-            height: auto;
-            margin-right: 10px;
+            height: 88px;
             vertical-align: middle;
+        }
+
+        /* Added CSS to align GitHub logo with IP Chicken link */
+        .github-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
         }
     </style>
 </head>
@@ -65,7 +71,7 @@
         <h1>Welcome to CTBT</h1>
         <button onclick="location.href='SpeedTest.html'">Speed Test</button>
         <button onclick="location.href='ip.html'">IP Address</button>
-        <button onclick="redirectToMap()">CTBT Map</button> <!-- Modified button -->
+        <button onclick="location.href='McMap.html'">CTBT Map</button>
         <button onclick="location.href='McServer.html'">MC Server Status</button>
     </div>
 
@@ -75,14 +81,10 @@
     </a>
 
     <!-- Added GitHub logo hyperlink -->
-    <a href="https://github.com/your-username/your-repository" target="_blank">
-        <img src="https://joshuapenalba.com/wp-content/uploads/2014/12/github-icon.png" alt="GitHub" class="github-logo">
-    </a>
-
-    <script>
-        function redirectToMap() {
-            window.location.href = "mc.ctbt.xyz:25568"; // Replace with your desired URL
-        }
-    </script>
+    <div class="github-container">
+        <a href="https://github.com/CTBT1" target="_blank">
+            <img src="https://joshuapenalba.com/wp-content/uploads/2014/12/github-icon.png" alt="GitHub" class="github-logo">
+        </a>
+    </div>
 </body>
 </html>
